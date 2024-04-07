@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<p>Hello, world!</p>
+<script>
+    "use strict";
+
+    let user = {
+        name: "John",
+        age: 30,
+        "favorite movie": "Citizen Kane" //多词属性名需要加引号
+    };
+
+    user.name = "Kane"; //点符号可以访问非多词属性
+    user["favorite movie"] = "The Pianist";//方括号均可以访问
+    let key = prompt("What do you want to know about the user?", "favorite movie");
+    document.write(user[key]);
+</script>

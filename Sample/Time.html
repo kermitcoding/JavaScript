@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<p>距离下课还有</p>
+<p id="demo"></p>
+<style>
+    p {
+        text-align: center;
+        font-size: 60px;
+    }
+</style>
+
+<script>
+
+    // 获取我们的目标时间
+    let key = prompt("Count down to: ", "Apr 12, 2024 10:05:00");
+    let countDownDate = new Date(key).getTime();
+
+    let x = setInterval(function () {
+
+        // 获取当前时间
+        let now = new Date().getTime();
+
+        // 计算当前时间与目标时间的差值
+        let distance = countDownDate - now;
+
+        // 将差值（差值单位为毫秒）转换为对应的天、时、分、秒
+        // floor函数对x向下取整
+        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // 将计算结果以id为“demo”的元素输出
+        document.getElementById("demo").innerHTML = days + "天 " + hours + "时 "
+            + minutes + "分 " + seconds + "秒 ";
+
+        // 已抵达目标时间
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "已下课！";
+        }
+    }, 1000);
+</script>
+
+</html>
