@@ -310,7 +310,7 @@ document.getElementById("demo").innerHTML = days + "天 " + hours + "时 "
 我们利用 `setInterval()` 来完成数据的定时刷新：
 ```js
 let x = setInterval(function () {
-    // 获取当前事件，计算差值，并将值赋给demo元素
+    // 获取当前时间，计算差值，并将值赋给demo元素
 }, 1000); // 每秒执行一次
 ```
 
