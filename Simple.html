@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>利用按钮改变字体颜色</title>
+</head>
+
+<body>
+    <div id="myword">我是什么颜色</div>
+    <p><button id="button">改变颜色</button></p>
+    <script>
+        button = document.getElementById("button");
+        button.addEventListener("click", function () {
+            document.getElementById("myword").style.color = "red";
+        });
+    </script>
+</body>
+
+</html>

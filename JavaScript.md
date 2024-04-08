@@ -401,10 +401,12 @@ element.addEventListener(event, function, useCapture);
 - 第二个参数是当事件发生时我们需要调用的函数；
 - 第三个参数时布尔值，指定使用事件冒泡还是事件捕获。此参数是可选的。
 
+***Simple Case Here***
+
 我们需要在鼠标单击`button`按钮时，完成一些初始化和调用启动游戏函数。
 
 ```js
-button.addEventListener("click", () => {
+button.addEventListener("click",function (){
     // 设置倒计时时间
     timer.textContent = "10";
 
