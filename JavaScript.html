@@ -3625,6 +3625,7 @@ hue-6-2: #e6c07b
 <li><a href="#11-%E4%BB%80%E4%B9%88%E6%98%AFjavascript">1.1. 什么是JavaScript？</a></li>
 <li><a href="#12-%E5%92%8Cjava%E7%9A%84%E5%85%B3%E7%B3%BB">1.2. 和Java的关系？</a></li>
 <li><a href="#13-javascript%E8%83%BD%E5%81%9A%E4%BB%80%E4%B9%88">1.3. JavaScript能做什么？</a></li>
+<li><a href="#14-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AD%A6%E4%B9%A0javascript">1.4. 为什么要学习JavaScript？</a></li>
 </ul>
 </li>
 <li><a href="#2-hello-world">2. Hello, world!</a>
@@ -3699,6 +3700,14 @@ JavaScript 在刚诞生的时候，它的名字叫 “LiveScript”。但是因�
 <li>获取或设置 cookie，向访问者提出问题或发送消息。</li>
 <li>记住客户端的数据（“本地存储”）。</li>
 </ul>
+<h2 id="14-为什么要学习javascript">1.4. 为什么要学习JavaScript？</h2>
+<ol>
+<li>交互性和动态性：JavaScript 是一种用于在网页上实现交互性和动态性的脚本语言。通过 JavaScript，你可以为用户提供更丰富、更动态的用户体验，例如表单验证、动画效果、页面内容的动态更新等。</li>
+<li>客户端脚本语言：JavaScript 在客户端执行，也就是在用户的浏览器上运行，这意味着你可以在用户的设备上直接操作和控制网页的行为，而不需要发送请求到服务器。这样可以减少服务器的负载，提高网页的响应速度。</li>
+<li>跨平台兼容性：JavaScript 是一种跨平台的脚本语言，几乎所有的现代浏览器都支持 JavaScript。这意味着你可以编写一次 JavaScript 代码，然后在多个不同的浏览器和操作系统上运行，而不需要针对每个平台编写专门的代码。</li>
+<li>强大的功能和库支持：JavaScript 语言本身提供了许多功能，例如操作 DOM 元素、处理表单数据、发送 AJAX 请求等。此外，JavaScript 生态系统中有大量的开源库和框架，如 React、Angular、Vue.js 等，可以帮助你更高效地开发复杂的 Web 应用程序。</li>
+<li>与后端集成：对于全栈开发人员来说，JavaScript 在后端也非常有用。通过 Node.js，你可以使用 JavaScript 运行在服务器端，构建高性能和可扩展的 Web 服务器和应用程序。</li>
+</ol>
 <h1 id="2-hello-world">2. Hello, world!</h1>
 <h2 id="21-三种交互函数">2.1. 三种交互函数</h2>
 <p>在此我们先介绍三种交互函数，以便后续的一些简单的小实例使用。<br>
@@ -3916,7 +3925,7 @@ Document 对象使我们可以从脚本中对 HTML 页面中的所有元素进�
 </ul>
 <p>我们利用 <code>setInterval()</code> 来完成数据的定时刷新：</p>
 <pre><code class="language-js"><span class="hljs-keyword">let</span> x = <span class="hljs-built_in">setInterval</span>(<span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) {
-    <span class="hljs-comment">// 获取当前事件，计算差值，并将值赋给demo元素</span>
+    <span class="hljs-comment">// 获取当前时间，计算差值，并将值赋给demo元素</span>
 }, <span class="hljs-number">1000</span>); <span class="hljs-comment">// 每秒执行一次</span>
 </code></pre>
 <p>我们将三个部分整合就得到了完整的程序。</p>
@@ -4002,8 +4011,9 @@ input.<span class="hljs-property">value</span> = <span class="hljs-string">&quot
 <li>第二个参数是当事件发生时我们需要调用的函数；</li>
 <li>第三个参数时布尔值，指定使用事件冒泡还是事件捕获。此参数是可选的。</li>
 </ul>
+<p><em><strong>Simple Case Here</strong></em></p>
 <p>我们需要在鼠标单击<code>button</code>按钮时，完成一些初始化和调用启动游戏函数。</p>
-<pre><code class="language-js">button.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&quot;click&quot;</span>, <span class="hljs-function">() =&gt;</span> {
+<pre><code class="language-js">button.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&quot;click&quot;</span>,<span class="hljs-keyword">function</span> (<span class="hljs-params"></span>){
     <span class="hljs-comment">// 设置倒计时时间</span>
     timer.<span class="hljs-property">textContent</span> = <span class="hljs-string">&quot;10&quot;</span>;
 
