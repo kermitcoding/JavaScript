@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-<p>距离下课还有</p>
+<p>距离目标还有</p>
 <p id="demo"></p>
 <style>
     p {
@@ -37,7 +37,7 @@
         // 已抵达目标时间
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("demo").innerHTML = "已下课！";
+            document.getElementById("demo").innerHTML = "已结束！";
         }
     }, 1000);
 </script>

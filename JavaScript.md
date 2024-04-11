@@ -174,7 +174,7 @@ JavaScript 中的 `null` 仅仅是一个代表“无”、“空”或“值未�
 
 ### 2.3.7. Object 类型
 `object`用于储存数据集合和更复杂的实体。
-我们可以用以下两种用法的任意一种来存创建一个空的对象：
+我们可以用以下两种用法的任意一种来创建一个空的对象：
 ```js
 let user = new Object(); // “构造函数”的语法
 let user = {}; // “字面量”的语法
@@ -277,7 +277,7 @@ let countDownDate = new Date(key);
 let key = prompt("Count down to: ", "Apr 12, 2024 10:05:00");
 let countDownDate = new Date(key).getTime();
 let now = new Date().getTime();
-let disdance = countDownDate - now; // 差值
+let distance = countDownDate - now; // 差值
 
 // 将差值（差值单位为毫秒）转换为对应的天、时、分、秒
 // Math.floor() 函数对x向下取整
@@ -321,7 +321,7 @@ let x = setInterval(function () {
 ```html
 <!DOCTYPE HTML>
 <html>
-<p>距离下课还有</p>
+<p>距离目标还有</p>
 <p id="demo"></p>
 <style>
     p {
@@ -357,7 +357,7 @@ let x = setInterval(function () {
         // 已抵达目标时间
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("demo").innerHTML = "已下课！";
+            document.getElementById("demo").innerHTML = "已结束！";
         }
     }, 1000);
 </script>
@@ -410,7 +410,7 @@ button.addEventListener("click",function (){
     // 设置倒计时时间
     timer.textContent = "10";
 
-    // 清空输入框和输出文本区域
+    // 清空输入框和提示框区域
     input.value = "";
     container.textContent = "";
 
@@ -422,7 +422,7 @@ button.addEventListener("click",function (){
 下面我们构造 `startGame()` 函数来启动游戏。  
 启动游戏时，我们要实现如下功能：
 1. 游戏启动后，禁用开始按钮；
-2. 显示待输入文本；
+2. 在提示框中显示待输入文本；
 3. 启动倒计时。
 
 #### 3.2.2.1. 禁用开始按钮
@@ -446,8 +446,8 @@ container.textContent = text; // 显示待输入文本
 前面我们已经完成了一个简单的倒计时程序，这里我们使用相同的 `setInterval()` 方法来实现计时器：
 
 ```js
-countdown = setInterval(() => {
-    const remainingTime = parseInt(timer.textContent) - 1; 
+countdown = setInterval(function () {
+    let remainingTime = parseInt(timer.textContent) - 1; 
     if (remainingTime === 0) {
         // 时间用完，游戏结束
         endGame();
