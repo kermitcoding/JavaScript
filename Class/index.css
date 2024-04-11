@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-container {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: rgb(242, 242, 242);
+    padding: 20px;
+    border-radius: 20px;
+    transition-duration: 0.4s;
+}
+
+.col-container:hover {
+    background-color: rgb(224, 224, 224);
+}
+
+.problem-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.problem-text {
+    margin-bottom: 10px;
+}
+
+.problem-btn {
+    cursor: pointer;
+}
+
+#color-div {
+    background-color: rgb(178, 203, 232);
+    width: 200px;
+    height: 50px;
+}
+
+#flex-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-item {
+    height: 50px;
+    width: 100px;
+    background-color: rgb(50, 50, 50);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
